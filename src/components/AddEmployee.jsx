@@ -2,7 +2,7 @@ import React from "react";
 import "../style/AddEmployee.css";
 import { Link } from "react-router-dom";
 function AddEmployee() {
-  
+ 
   return (
     <div className="App">
       <div className="div-cont-register">
