@@ -1,5 +1,7 @@
 import React from "react";
 import "../style/Login.css"
+
+import { Link } from "react-router-dom";
 function Login() {
 
 
@@ -7,10 +9,10 @@ function Login() {
     <div className="App">
   
      
-        <div class="newsletter-form-log">
-          <form class="form">
+        <div className="newsletter-form-log">
+          <form className="form">
           
-          <p class="heading">   Ingrese sus datos</p>
+          <p className="heading">   Ingrese sus datos</p>
             <input
               required=""
               placeholder="Enter your email address"
@@ -27,9 +29,9 @@ function Login() {
               className="email"
             />
         
-            <button value="Crear cuenta" type="submit" class="btn-log">
+        <Link to={'/employees'} >    <button value="Crear cuenta" type="submit" className="btn-log">
               Iniciar Sesion
-            </button>
+            </button></Link>
           </form>
       
      

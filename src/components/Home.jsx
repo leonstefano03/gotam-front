@@ -14,7 +14,7 @@ function Home() {
       <h2>TECNOLOGIA APLICADA A LA MOVILIDAD</h2>
     </div>
     <div className="button-cont">
-     <Link> <button class="ui-btn">
+     <Link to={'/signup'}> <button className="ui-btn">
         <span>Registrate</span>
       </button></Link>
     </div>

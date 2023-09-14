@@ -1,13 +1,14 @@
 import React from "react";
 import "../style/AddEmployee.css";
+import { Link } from "react-router-dom";
 function AddEmployee() {
   
   return (
     <div className="App">
       <div className="div-cont-register">
         <div className="cont-form">
-          <div class="newsletter-form-add">
-            <form class="form">
+          <div className="newsletter-form-add">
+            <form className="form">
               <input
                 required=""
                 placeholder="Enter full name"
@@ -53,7 +54,7 @@ function AddEmployee() {
                 className="email"
               />
 
-              <button value="Crear cuenta" type="submit" class="btn-add">
+              <button value="Crear cuenta" type="submit" className="btn-add">
                 Agregar Empleado
               </button>
             </form>
@@ -61,9 +62,9 @@ function AddEmployee() {
         </div>
         <div className="div-h1">
           <h1> QUERES VER LA LISTA?</h1>
-          <button value="Crear cuenta" type="submit" class="btn-add">
+        <Link  to={'/employees'}>  <button value="Crear cuenta" type="submit" className="btn-add">
             Empleados
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

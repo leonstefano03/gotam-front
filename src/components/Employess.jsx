@@ -84,10 +84,10 @@ function Employees() {
     <div className="App">
   
      
-        <div class="newsletter-form-emp">
-          <form class="form">
+        <div className="newsletter-form-emp">
+          <form className="form">
           
-          <p class="heading">EMPLEADOS</p>
+          <p className="heading">EMPLEADOS</p>
         
 
 
@@ -111,9 +111,9 @@ function Employees() {
         </Slider>
 
 
-            <button value="Crear cuenta" type="submit" class="btn-emp">
+          <Link to={"/add/Employee"}><button value="Crear cuenta" type="submit" className="btn-emp">
               Añadir Empleado
-            </button>
+            </button></Link>  
           </form>
       
      
