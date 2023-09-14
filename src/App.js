@@ -5,10 +5,11 @@ import Home from "./components/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Employees from "./components/Employess";
+import AddEmployee from "./components/AddEmployee";
 
 function App() {
   return (
-   <Employees/>
+   <AddEmployee/>
   );
 }
 
