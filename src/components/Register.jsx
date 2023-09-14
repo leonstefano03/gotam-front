@@ -1,5 +1,7 @@
 import React from "react";
 import "../style/Register.css"
+
+import { Link } from "react-router-dom";
 function Register() {
 
 
@@ -7,8 +9,8 @@ function Register() {
     <div className="App">
     <div className="div-cont-register">
       <div className="cont-form">
-        <div class="newsletter-form">
-          <form class="form">
+        <div className="newsletter-form">
+          <form className="form">
             <input
               required=""
               placeholder="Enter your full name"
@@ -33,17 +35,18 @@ function Register() {
               className="email"
             />
 
-            <button value="Crear cuenta" type="submit" class="btn">
+          <Link to={"/login"}>
+         <button value="Crear cuenta" type="submit" className="btn">
               Crear Cuenta
-            </button>
+            </button>  </Link> 
           </form>
         </div>
       </div>
       <div className="div-h1">
         <h1>YA ESTAS REGISTRADO?</h1>
-        <button value="Crear cuenta" type="submit" class="btn">
+       <Link to={'/login'}> <button value="Crear cuenta" type="submit" className="btn">
           Iniciar Sesion
-        </button>
+        </button></Link>
       </div>
     </div>
   </div>
