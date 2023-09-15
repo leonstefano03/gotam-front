@@ -72,7 +72,7 @@ function Employees() {
     infinite: true,
     speed: 500,
     slidesToShow: 1, // Mostrar 4 clientes al mismo tiempo
-    rows: 6,
+    rows: 8,
     slidesPerRow: 1,
     arrows: true,
   };
@@ -93,18 +93,19 @@ function Employees() {
 
           <Slider {...settings} className="slider">
           {fakeData.map((elem, id) => (
-            <Link>
+            <Link >
             <div
                 className="con-info"
                 onClick={() => {
                   handleClick(id);
                 }}
               >
-                <h1>{elem.full_name}</h1>
-                <h1>{elem.dni}</h1>
-                <h1>{elem.developer.toString()}</h1>
-                <h1>{elem.birthday}</h1>
-                <h1>{elem.additional_information}</h1>
+               
+            <div className="div1">    <h1>{elem.full_name}</h1></div> 
+            <div className="div2">    <h1>{elem.dni}</h1></div> 
+            <div className="div3">   <h1>{elem.developer.toString()}</h1></div> 
+            <div className="div4">   <h1>{elem.birthday}</h1></div> 
+            <div className="div5">   <h1>{elem.additional_information}</h1></div> 
               </div>
             </Link>
           ))}
