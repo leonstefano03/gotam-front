@@ -1,31 +1,29 @@
-# GOTAM - Documentación del Proyecto
+# GOTAM - Project Documentation
 
-## instalacion
+## installation
 
-### instrucciones
+### instructions
 
-Para instalar y configurar el front de gotam en su entorno de desarrollo, siga estos pasos:
+To install and configure gotam frontend in your development environment, follow these steps:
 
-1. clona el repositorio
+1. clone the repository
 
-2. instala las dependencias:
+2. install the dependencies:
+
 
 cd gotam-front
 npm install
 
-3. inicia el proyecto:
+3. start the project:
 npm start
 
-## En la app
+## in the app
 
-1. crea un usuario
-2. logueate
-3. apreta en añadir empleado
-4. primero agrega las areas que tengas
-5. coloca los datos y luego los vas a ver en empleados
-
-
-
+1. create a user
+2. log in
+3. Click on add employee
+4. first add the areas you have
+5. enter the data and then you will see it in employees
 
 
 # Getting Started with Create React App
