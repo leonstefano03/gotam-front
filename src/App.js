@@ -11,7 +11,7 @@ function App() {
 
   // useEffect(() => {
   //   axios
-  //     .get("http://localhost:3001/api/users/me", { withCredentials: true })
+  //     .get("http://localhost:3001/api/user/me")
   //     .catch(() => console.error("You are not logged in"));
   // }, []);
 
