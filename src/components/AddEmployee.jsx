@@ -9,10 +9,11 @@ function AddEmployee() {
   const [dni, setDni] = useState("");
   const [birthday, setBirthday] = useState("");
   const [developer, setDeveloper] = useState(false);
-  const [additional_infomation, setAdditional_information] = useState("");
+  const [additional_information, setAdditional_information] = useState("No hay informacion adicional");
   const [areas, setAreas] = useState([]);
   const [AreaId, setAreaId] = useState("");
   const [area, setArea] = useState("");
+  
   useEffect(() => {
     axios
       .get("http://localhost:3001/api/area/all")
@@ -21,7 +22,6 @@ function AddEmployee() {
       })
       .catch((error) => {
         console.log(error);
-        alert("Se ha producido un error al cargar las áreas.");
       });
   }, [area]);
 
@@ -34,7 +34,7 @@ function AddEmployee() {
         dni,
         birthday,
         developer,
-        additional_infomation,
+        additional_information,
         AreaId,
       })
       .then((res) => {
@@ -43,7 +43,7 @@ function AddEmployee() {
         setDni("");
         setBirthday("");
         setDeveloper(false);
-        setAdditional_information("");
+        setAdditional_information("No hay informacion adicional");
         setAreaId("");
       })
       .catch((error) => {
@@ -112,7 +112,7 @@ function AddEmployee() {
                 name="info"
                 type="text"
                 className="email"
-                value={additional_infomation}
+                value={additional_information}
                 onChange={(e) => setAdditional_information(e.target.value)}
               />
 
