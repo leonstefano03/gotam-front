@@ -1,3 +1,33 @@
+# GOTAM - Documentación del Proyecto
+
+## instalacion
+
+### instrucciones
+
+Para instalar y configurar el front de gotam en su entorno de desarrollo, siga estos pasos:
+
+1. clona el repositorio
+
+2. instala las dependencias:
+
+cd gotam-front
+npm install
+
+3. inicia el proyecto:
+npm start
+
+## En la app
+
+1. crea un usuario
+2. logueate
+3. apreta en añadir empleado
+4. primero agrega las areas que tengas
+5. coloca los datos y luego los vas a ver en empleados
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
