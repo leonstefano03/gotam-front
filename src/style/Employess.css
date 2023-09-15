@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 500px;
-  width: 450px;
+  width: 800px;
   padding: 20px;
   border: 2px solid #333;
   border-radius: 8px;
@@ -35,7 +35,7 @@
 }
 
 .btn-emp {
-  margin-top: 40px;
+  margin-top: 25px;
   padding: 1.1em 2em;
   background: none;
   border: 2px solid #fff;
@@ -76,12 +76,38 @@
 .btn-emp:active {
   transform: scale(0.9);
 }
-.con-info{
-  font-size: 7px;
-  display: flex;
+.con-info {
+  display: flex;text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
+.con-info h1{
+  height: 100%;
+  font-size: 13px;
+  
+  color: #000;
+}
+.div1{
+  width: 20%;
+}
+.div2{
+  width: 20%;
+}
+.div3{
+  width: 10%;
+}
+.div4{
+  width: 20%;
+}
+.div5{
+  width: 30%;
+}
+
 .slider{
   background-color: #ffffff;
   height: 330px;
-  width: 400px;
+  width: 700px;
+  border-radius: 10px;
+  padding: 1%;
 }
