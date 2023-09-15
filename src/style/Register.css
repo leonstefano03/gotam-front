@@ -48,7 +48,7 @@
   border-radius: 4px;
 }
 
-.btn {
+.btn-reg {
   margin-top: 40px;
   padding: 1.1em 2em;
   background: none;
@@ -65,7 +65,7 @@
   box-shadow: 0 2px 0 2px #000;
 }
 
-.btn:before {
+.btn-reg:before {
   content: "";
   position: absolute;
   width: 100px;
@@ -76,17 +76,17 @@
   transition: all 0.5s;
 }
 
-.btn:hover {
+.btn-reg:hover {
   background-color: #00526b;
   color: #fff;
   box-shadow: 0 2px 0 2px #0d3b66;
 }
 
-.btn:hover::before {
+.btn-reg:hover::before {
   transform: skewX(30deg) translate(150%, -50%);
   transition-delay: 0.1s;
 }
 
-.btn:active {
+.btn-reg:active {
   transform: scale(0.9);
 }
