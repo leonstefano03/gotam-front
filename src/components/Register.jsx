@@ -66,7 +66,7 @@ function Register() {
                 }}
               />
 
-              <button value="Crear cuenta" type="submit" className="btn">
+              <button value="Crear cuenta" type="submit" className="btn-reg">
                 Crear Cuenta
               </button>
             </form>
@@ -76,7 +76,7 @@ function Register() {
           <h1>YA ESTAS REGISTRADO?</h1>
           <Link to={"/login"}>
             {" "}
-            <button value="Crear cuenta" type="submit" className="btn">
+            <button value="Crear cuenta" type="submit" className="btn-reg">
               Iniciar Sesion
             </button>
           </Link>
