@@ -12,7 +12,7 @@ function AddEmployee() {
   const [additional_infomation, setAdditional_information] = useState("");
   const [areas, setAreas] = useState([]);
   const [AreaId, setAreaId] = useState("");
-
+  const [area, setArea] = useState("");
   useEffect(() => {
     axios
       .get("http://localhost:3001/api/area/all")
@@ -23,7 +23,7 @@ function AddEmployee() {
         console.log(error);
         alert("Se ha producido un error al cargar las áreas.");
       });
-  }, []);
+  }, [area]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,6 +51,24 @@ function AddEmployee() {
         alert("Se ha producido un error.");
       });
   };
+
+  const handleSubmitArea = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:3001/api/area/create", {
+        area
+      })
+      .then((res) => {
+        console.log("area creada con exito");
+        setArea("");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Se ha producido un error.");
+      });
+  };
+
+
 
   return (
     <div className="App">
@@ -140,6 +158,24 @@ function AddEmployee() {
           </div>
         </div>
         <div className="div-h1">
+          <div className="newsletter-form-area">
+            <form className="form" onSubmit={handleSubmitArea}>
+              <p className="heading">AREAS</p>
+              <input
+                required=""
+                placeholder="Nombre del area a crear"
+                name="area"
+                type="text"
+                className="email"
+                value={area}
+                onChange={(e) => setArea(e.target.value)}
+              />
+
+              <button value="Crear empleado" type="submit" className="btn-area">
+                Agregar Area
+              </button>
+            </form>
+          </div>
           <h1> QUERES VER LA LISTA?</h1>
           <Link to={"/employees"}>
             {" "}
