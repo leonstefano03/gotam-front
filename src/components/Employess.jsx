@@ -31,7 +31,7 @@ function Employees() {
     infinite: true,
     speed: 500,
     slidesToShow: 1, // Mostrar 4 clientes al mismo tiempo
-    rows: 8,
+    rows: 10,
     slidesPerRow: 1,
     arrows: true,
   };
@@ -82,7 +82,7 @@ function Employees() {
                   </div></div>
           <Slider {...settings} className="slider">
             {formattedEmployees.map((elem, id) => (
-              <Link>
+              <Link to={`/employee/${elem.id}`}>
                 <div
                   className="con-info "
                 >

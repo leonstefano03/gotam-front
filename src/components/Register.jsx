@@ -30,6 +30,7 @@ function Register() {
         <div className="cont-form">
           <div className="newsletter-form">
             <form className="form" onSubmit={handleSubmit}>
+            <p className="heading">REGISTRATE</p>
               <input
                 required=""
                 placeholder="Enter your full name"
@@ -75,7 +76,6 @@ function Register() {
         <div className="div-h1">
           <h1>YA ESTAS REGISTRADO?</h1>
           <Link to={"/login"}>
-            {" "}
             <button value="Crear cuenta" type="submit" className="btn-reg">
               Iniciar Sesion
             </button>

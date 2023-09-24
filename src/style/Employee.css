@@ -1,0 +1,46 @@
+.cont-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 30vw;
+  padding: 1.5vw;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #e4b600;
+  font-family: Arial, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.cont-title{
+  display: flex;
+}
+.heading {
+  font-weight: bold;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}.edit{
+  font-size: 1.5vw;
+ cursor: pointer;
+}
+
+.cont-info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 10px;
+background-color: white;
+}
+.b-h1 {
+  border-bottom: 1px solid black;
+}
+.cont-one h1 {
+  text-align: start;
+  width: 100%;
+  padding: .5vw;
+  color: #000000;
+  font-size: 1.5vw;
+}

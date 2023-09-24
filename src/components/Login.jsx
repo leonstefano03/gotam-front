@@ -34,7 +34,7 @@ function Login() {
     <div className="App">
       <div className="newsletter-form-log">
         <form className="form" onSubmit={handleSubmit}>
-          <p className="heading"> Ingrese sus datos</p>
+          <p className="heading"> INGRESE SUS DATOS</p>
           <input
             required=""
             placeholder="Enter your email address"

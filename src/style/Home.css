@@ -51,6 +51,7 @@
   transition: var(--btn-transition);
   overflow: hidden;
   box-shadow: var(--btn-shadow);
+
 }
 
 .ui-btn span {

@@ -7,6 +7,9 @@ import Login from "./components/Login";
 import Employees from "./components/Employess";
 import AddEmployee from "./components/AddEmployee";
 import axios from "axios";
+import Employee from "./components/Employee";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 function App() {
 
   // useEffect(() => {
@@ -17,13 +20,16 @@ function App() {
 
   return (
     <>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/add/employee" element={<AddEmployee />} />
         <Route path="/employees" element={<Employees />} />
+        <Route path="/employee/:id" element={<Employee />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

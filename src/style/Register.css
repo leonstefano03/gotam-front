@@ -20,9 +20,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
-  max-width: 400px;
-  padding: 20px;
+  max-width: 30vw;
+  padding: 1vw;
   border: 2px solid #333;
   border-radius: 8px;
   background-color: #E4B600;
@@ -31,32 +30,13 @@
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.heading {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.newsletter-form h2 {
-  margin-top: 0;
-  color: #333;
-  font-size: 24px;
-}
-
-
-.email {
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
 
 .btn-reg {
-  margin-top: 40px;
+  margin-top: 1.5vw;
   padding: 1.1em 2em;
   background: none;
   border: 2px solid #fff;
-  font-size: 15px;
+  font-size: 1.2vw;
   color: #ffffff;
   cursor: pointer;
   position: relative;
@@ -71,7 +51,7 @@
 .btn-reg:before {
   content: "";
   position: absolute;
-  width: 100px;
+  width: 130px;
   height: 120%;
   background-color: #ff6700;
   top: 50%;

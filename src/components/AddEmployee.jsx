@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "../style/AddEmployee.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function AddEmployee() {
-  const navigate = useNavigate();
+
   const [full_name, setFull_name] = useState("");
   const [dni, setDni] = useState("");
   const [birthday, setBirthday] = useState("");
   const [developer, setDeveloper] = useState(false);
-  const [additional_information, setAdditional_information] = useState("No hay informacion adicional");
+  const [additional_information, setAdditional_information] = useState(
+    "No hay informacion adicional"
+  );
   const [areas, setAreas] = useState([]);
   const [AreaId, setAreaId] = useState("");
   const [area, setArea] = useState("");
-  
+  const [areaDrop, setAreaDrop] = useState("Seleccione el Area");
+
   useEffect(() => {
     axios
       .get("http://localhost:3001/api/area/all")
@@ -45,6 +48,7 @@ function AddEmployee() {
         setDeveloper(false);
         setAdditional_information("No hay informacion adicional");
         setAreaId("");
+        setAreaDrop("Seleccione el Area");
       })
       .catch((error) => {
         console.log(error);
@@ -56,7 +60,7 @@ function AddEmployee() {
     e.preventDefault();
     axios
       .post("http://localhost:3001/api/area/create", {
-        area
+        area,
       })
       .then((res) => {
         console.log("area creada con exito");
@@ -68,14 +72,13 @@ function AddEmployee() {
       });
   };
 
-
-
   return (
     <div className="App">
       <div className="div-cont-register">
         <div className="cont-form">
           <div className="newsletter-form-add">
             <form className="form" onSubmit={handleSubmit}>
+              <p className="heading">INGRESE LOS DATOS</p>
               <input
                 required=""
                 placeholder="Nombre completo"
@@ -123,7 +126,7 @@ function AddEmployee() {
               <input
                 class="form-check-input"
                 type="checkbox"
-                hecked={developer}
+                checked={developer}
                 id="check"
                 onChange={(e) => setDeveloper(e.target.checked)}
               />
@@ -134,7 +137,7 @@ function AddEmployee() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Seleccione el área
+                  {areaDrop}
                 </button>
                 <ul className="dropdown-menu">
                   {areas.map((areaItem, index) => (
@@ -142,7 +145,10 @@ function AddEmployee() {
                       <a
                         className="dropdown-item"
                         href="#"
-                        onClick={() => setAreaId(areaItem.id)}
+                        onClick={() => {
+                          setAreaId(areaItem.id);
+                          setAreaDrop(areaItem.area);
+                        }}
                       >
                         {areaItem.area}
                       </a>
@@ -180,7 +186,7 @@ function AddEmployee() {
           <Link to={"/employees"}>
             {" "}
             <button value="Crear cuenta" type="submit" className="btn-add">
-              Empleados
+              Ver empleados
             </button>
           </Link>
         </div>
