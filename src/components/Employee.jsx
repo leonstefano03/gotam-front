@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import { apiKey } from "../configURL";
+
 
 function Employee() {
   const [employee, setEmployee] = useState([]);
@@ -19,9 +21,10 @@ function Employee() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/area/all")
+      .get(`http://localhost:3001/api/area/all`)
       .then((res) => {
         setAreas(res.data);
       })
@@ -31,7 +34,7 @@ function Employee() {
   }, []);
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/employee/${id}`)
+      .get(`${apiKey}/api/employee/${id}`)
       .then((res) => {
         setDeveloperCheck(res.data.developer);
         const formattedEmployee = res.data;
@@ -57,7 +60,7 @@ function Employee() {
   };
   const handleDelete = () => {
     axios
-      .delete(`http://localhost:3001/api/employee/delete/${employee.id}`, {})
+      .delete(`${apiKey}/api/employee/delete/${employee.id}`, {})
       .then(() => {
         console.log("empleado eliminado con exito");
         navigate("/employees");
@@ -69,7 +72,7 @@ function Employee() {
   };
   const handleSubmit = () => {
     axios
-      .put(`http://localhost:3001/api/employee/update/${employee.id}`, {
+      .put(`${apiKey}/api/employee/update/${employee.id}`, {
         full_name,
         dni,
         birthday,

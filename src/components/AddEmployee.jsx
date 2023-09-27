@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../style/AddEmployee.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { apiKey } from "../configURL";
 
 function AddEmployee() {
 
@@ -19,7 +20,7 @@ function AddEmployee() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/area/all")
+      .get(`${apiKey}/api/area/all`)
       .then((res) => {
         setAreas(res.data);
       })
@@ -32,7 +33,7 @@ function AddEmployee() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3001/api/employee/create", {
+      .post(`${apiKey}/api/employee/create`, {
         full_name,
         dni,
         birthday,
@@ -59,7 +60,7 @@ function AddEmployee() {
   const handleSubmitArea = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/api/area/create", {
+      .post(`${apiKey}/api/area/create`, {
         area,
       })
       .then((res) => {

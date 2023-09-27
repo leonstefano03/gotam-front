@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { apiKey } from "../configURL";
 
 function Employees() {
   const [employee, setEmployee] = useState([]);
@@ -37,7 +38,7 @@ function Employees() {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/employee/all")
+      .get(`${apiKey}/api/employee/all`)
       .then((res) => {
         setEmployee(res.data);
       })
@@ -46,7 +47,7 @@ function Employees() {
       });
 
     axios
-      .get("http://localhost:3001/api/area/all")
+      .get(`${apiKey}/api/area/all`)
       .then((res) => {
         setAreas(res.data);
       })

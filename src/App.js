@@ -12,11 +12,6 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 function App() {
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:3001/api/user/me")
-  //     .catch(() => console.error("You are not logged in"));
-  // }, []);
 
   return (
     <>
