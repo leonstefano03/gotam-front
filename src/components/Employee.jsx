@@ -24,7 +24,7 @@ function Employee() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/area/all`)
+      .get(`${apiKey}/api/area/all`)
       .then((res) => {
         setAreas(res.data);
       })
