@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect } from "react";
+import "./style/App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Employees from "./components/Employess";
+import AddEmployee from "./components/AddEmployee";
+import axios from "axios";
+import Employee from "./components/Employee";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 function App() {
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3001/api/user/me")
+  //     .catch(() => console.error("You are not logged in"));
+  // }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/add/employee" element={<AddEmployee />} />
+        <Route path="/employees" element={<Employees />} />
+        <Route path="/employee/:id" element={<Employee />} />
+      </Routes>
+      <Footer/>
+    </>
   );
 }
 
