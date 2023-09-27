@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { apiKey } from "../configURL";
 
 function Login() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function Login() {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:3001/api/user/login",
+        `${apiKey}/api/user/login`,
         {
           email,
           password,

@@ -1,0 +1,1 @@
+export const apiKey='https://gotam-back.onrender.com'
